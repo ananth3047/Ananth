@@ -1,0 +1,788 @@
+1)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+   Scanner sc = new Scanner(System.in);
+         String str1 = sc.nextLine();
+        for(int i = str1.length()-1;i>=0;i--){
+            System.out.print(str1.charAt(i));
+        }
+    }
+}
+2)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine();
+        String str2= str1.replaceAll("\\s", "");
+        System.out.println(str2);
+        sc.close();
+    }
+}
+3)
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1=s.nextLine();
+        String ans="";
+        for(int i = 0;i<s1.length();i++)
+        {
+            char ch=s1.charAt(i);
+            if(ch!='a' && ch!='e' && ch!='i' && ch!='o' && ch!='u' && ch!='A' && ch!='E' && ch!='I' && ch!='O' && ch!='U'){
+                ans=ans+ch;
+            }
+        }
+        System.out.println(ans);
+            }
+}
+4)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1=sc.next();
+        String s2=sc.next();
+        System.out.print(s1+s2);
+    }
+}
+5)
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String s1=s.nextLine();
+        int count=0;
+        for(int i = 0;i<s1.length();i++)
+        {
+            char ch=s1.charAt(i);
+            if(ch =='a' || ch =='e' || ch =='i' || ch =='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch =='U'){
+                count+=1;
+            }
+        }
+        System.out.println(count);
+            }
+}
+6)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        for(int i = 0;i<n;i++){
+            a[i] = sc.nextInt();
+        }
+        int Youngest = a[0];
+        int Oldest = a[0];
+        for(int i = 1;i<n;i++){
+            if(a[i]>Oldest){
+                Oldest = a[i];
+            }
+            if(a[i]<Youngest){
+                Youngest = a[i];
+            }
+            }
+        System.out.println("Youngest=" + Youngest);
+        System.out.println("Oldest=" + Oldest);
+        }
+}
+7)
+import java.io.*;
+import java.util.*;
+public class Solution {
+public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+    int a[] = new int[n];
+    for(int i = 0;i < n;i++){
+        a[i] = sc.nextInt();
+    }
+    int add = sc.nextInt();
+    int index = -1;
+    for(int i = 0;i<n;i++){
+        if(a[i] == add){
+            index = i;
+    }}
+        if(index == -1){
+            System.out.println("-1");
+        }else{
+    
+        System.out.printf("Door Number is %03d-DN\n", index);
+        }
+    }
+}
+8)
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n1 = s.nextInt();
+        int n2 = s.nextInt();
+        if (n1 < 1 || n1 > 20 || n2 < 1 || n2 > 20 || n1 > n2) {
+            System.out.println("Invalid Input");
+        } else {
+            long a = 0;
+            long b = 1;
+            long sum = 0;
+            for (int i = 1; i <= n2; i++) {
+                if (i >= n1) {
+                    sum += a;
+                }
+                long c = a + b;
+                a = b;
+                b = c;
+            }
+            
+            System.out.println("The Sum of Fibonacci value is " + (float)sum);
+        }
+    }
+}
+9)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int temp = num;
+        int sum = 0;
+        while (temp > 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        if (num % sum == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not Harshad Number");
+        }
+        sc.close();
+    }
+    }
+10)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt(); 
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum > num) {
+            System.out.println("Abundant Number");
+        } else {
+            System.out.println("Not Abundant Number");
+        }
+    }
+}
+11)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num >= 100) { 
+            int sum = 0;
+            int temp = num;
+            while (temp > 0) {
+                sum += temp % 10; 
+                temp /= 10;       
+            }
+            System.out.println("Sum of digit is " + sum);
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+}
+12)
+import java.util.Scanner;
+public class FibonacciRangeSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);      
+        int n = sc.nextInt();
+        int m = sc.nextInt();    
+        if (n < 1 || n > 20 || m < 1 || m > 20) {
+            System.out.println("Invalid Input");
+            return;
+        }         
+        if (n > m) {
+            int temp = n;
+            n = m;
+            m = temp;
+        }       
+        int[] fib = new int[m];
+        fib[0] = 0; 
+        if (m > 1) fib[1] = 1;        
+        for (int i = 2; i < m; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }      
+        int sum = 0;
+        for (int i = n - 1; i < m; i++) {
+            sum += fib[i];
+        }        
+        System.out.println("The Sum of Fibonacci value is " + (sum * 1.0));
+    }
+}
+13)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n >= 1 && n <= 9) {
+            for (int i = 1; i <= n; i++) {
+                System.out.println(n + " x " + i + " = " + (n * i) + " ");
+            }
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+}
+14)
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        if (n <= 0 || m <= 0 || n >= 30 || m >= 30 || n > m) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        int sum = 0;
+        for (int i = n; i <= m; i++) {
+            if (i % 2 == 0) {
+                sum += i;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+15)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n < 100 || n > 999) {
+            System.out.println("No");
+            return;
+        }
+
+        int original = n;
+        int sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum += digit * digit * digit;
+            n /= 10;
+        }
+
+        if (sum == original) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
+
+16)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String num = sc.next();
+
+        if (num.length() < 2) {
+            System.out.println("STDOUT");
+        } else {
+            
+            char first = num.charAt(0);
+            char second = num.charAt(1);
+
+         
+            System.out.println("" + second + first);
+        }
+    }
+}
+
+17)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+
+        if (n <= 0 || n >= 1000000000) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        long reversed = 0;
+        while (n > 0) {
+            long digit = n % 10;    
+            reversed = reversed * 10 + digit; 
+            n /= 10;                
+        }
+
+        System.out.println(reversed);
+    }
+}
+18)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n == 0) {
+            System.out.println("zero");
+        } else if (n > 0) {
+            System.out.println("positive");
+        } else {
+            System.out.println("negative");
+        }
+    }
+}
+19)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+        int m1 = sc.nextInt();
+        int m2 = sc.nextInt();
+        int m3 = sc.nextInt();
+        int m4 = sc.nextInt();
+        int m5 = sc.nextInt();
+
+        int total = m1 + m2 + m3 + m4 + m5;
+        double average = total / 5.0;
+
+        String grade;
+        if (average == 100) {
+            grade = "S";
+        } else if (average >= 90) {
+            grade = "A";
+        } else if (average >= 80) {
+            grade = "B";
+        } else if (average >= 70) {
+            grade = "C";
+        } else if (average >= 60) {
+            grade = "D";
+        } else if (average >= 50) {
+            grade = "E";
+        } else {
+            grade = "Fail";
+        }
+
+        System.out.println("Name of the Student:" + name);
+        System.out.println("Total Mark:" + total);
+        System.out.println("Average Mark:" + average);
+        System.out.println("Grade Mark:" + grade);
+    }
+}
+20)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (a > b) {
+            if (a > c) {
+                System.out.println("a is largest then b and c");
+            } else {
+                System.out.println("c is largest then a and b");
+            }
+        } else {
+            if (b > c) {
+                System.out.println("b is largest then a and c");
+            } else {
+                System.out.println("c is largest then a and b");
+            }
+        }
+    }
+}
+21)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n < 100 || n > 999) {
+            System.out.println("Invalid Input");
+        } else {
+            int original = n;
+            int reversed = 0;
+
+            while (n > 0) {
+                int digit = n % 10;
+                reversed = reversed * 10 + digit;
+                n /= 10;
+            }
+
+            if (original == reversed) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("not palindrome");
+            }
+        }
+    }
+}
+22)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+
+        if (Character.isLetter(ch)) {
+          
+            char lower = Character.toLowerCase(ch);
+
+            if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+                System.out.println("The Character " + ch + " is Vowel");
+            } else {
+                System.out.println("The Character " + ch + " is Consonant");
+            }
+        } else {
+            System.out.println("Invalid Input");
+        }
+    }
+}
+23)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println("Hello");
+       Scanner b = new Scanner(System.in);
+        String a = b.nextLine();
+        System.out.println(a);
+    }
+        
+}
+24)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        float c = a.nextFloat();
+        System.out.println(b);
+        System.out.printf("%.2f",c);
+    }
+}
+25)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner a = new Scanner(System.in);
+        String b = a.next();
+        System.out.print("May I know how to learn " + b +"!!!...");
+    }
+}
+26)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner a = new Scanner(System.in);
+        String b = a.nextLine();
+        System.out.println("Hai " + b + "!" + "    Welcome to Programming Language... ");
+    }
+}
+27)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double floatVal = sc.nextDouble();
+        int squareVal = sc.nextInt();
+        int base = sc.nextInt();
+        int power = sc.nextInt();
+
+      
+        System.out.println((int)Math.floor(floatVal));
+        System.out.println((int)Math.ceil(floatVal));
+
+        System.out.println((int)Math.sqrt(squareVal));
+
+     
+        System.out.println((int)Math.pow(base, power));
+    }
+}
+28)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x1 = sc.nextInt();
+        int y1 = sc.nextInt();
+        int x2 = sc.nextInt();
+        int y2 = sc.nextInt();
+
+        double midX = (x1 + x2) / 2.0;
+        double midY = (y1 + y2) / 2.0;
+
+        System.out.println("Binoy's house is located at (" + midX + "," + midY + ")");
+    }
+}
+29)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int base = sc.nextInt();
+        int height = sc.nextInt();
+        int side1 = sc.nextInt();
+        int side2 = sc.nextInt();
+        int side3 = sc.nextInt();
+
+  
+        double area = 0.5 * base * height;
+
+        double perimeter = side1 + side2 + side3;
+
+        System.out.printf("Area of Triangle is %.2f\n", area);
+        System.out.printf("Perimeter of Triangle is %.2f\n", perimeter);
+    }
+}
+30)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int hours = sc.nextInt();
+        int minutes = sc.nextInt();
+        int seconds = sc.nextInt();
+
+    
+        minutes += seconds / 60;
+        seconds = seconds % 60;
+
+      
+        hours += minutes / 60;
+        minutes = minutes % 60;
+
+      
+        System.out.println("Total Number of hours is " + hours);
+        System.out.println("Total Number of minutes is " + minutes);
+        System.out.println("Total Number of seconds is " + seconds);
+    }
+}
+31)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        int x = sc.nextInt(); 
+        int a = sc.nextInt(); 
+        int b = sc.nextInt(); 
+
+        
+        int fixedCost = 100;
+
+      
+        double profit = (a - b) * x - fixedCost;
+
+        System.out.println("Number of copies sold:" + x);
+        System.out.println("Cost of each copy:" + a);
+        System.out.println("Cost spent by agency on each newspaper:" + b);
+        System.out.printf("The profit obtained is Rs.%.2f\n", profit);
+    }
+}
+32)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+       
+        LinkedHashMap<Character, Integer> countMap = new LinkedHashMap<>();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            countMap.put(ch, countMap.getOrDefault(ch, 0) + 1);
+        }
+
+      
+        for (Map.Entry<Character, Integer> entry : countMap.entrySet()) {
+            System.out.println(entry.getKey() + "   " + entry.getValue());
+        }
+    }
+}
+33)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        int vowels = 0, consonants = 0, digits = 0, special = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isDigit(ch)) {
+                digits++;
+            } else if (Character.isLetter(ch)) {
+                char lower = Character.toLowerCase(ch);
+                if (lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            } else {
+                special++;
+            }
+        }
+
+        System.out.println("vowels:" + vowels);
+        System.out.println("consonants:" + consonants);
+        System.out.println("digits:" + digits);
+        System.out.println("special characters:" + special);
+    }
+}
+34)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        boolean allDigits = true;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                allDigits = false;
+                break;
+            }
+        }
+
+        if (allDigits) {
+            System.out.println("only digits");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
+35)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        boolean allDigits = true;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                allDigits = false;
+                break;
+            }
+        }
+
+        if (allDigits) {
+            System.out.println("only digits");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
+36)
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+
+        str1 = str1.replaceAll("\\s", "").toLowerCase();
+        str2 = str2.replaceAll("\\s", "").toLowerCase();
+
+        if (str1.length() != str2.length()) {
+            System.out.println("The given strings are not an anagram");
+            return;
+        }
+
+
+        char[] arr1 = str1.toCharArray();
+        char[] arr2 = str2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        if (Arrays.equals(arr1, arr2)) {
+            System.out.println("The given strings are an anagram");
+        } else {
+            System.out.println("The given strings are not an anagram");
+        }
+    }
+}
